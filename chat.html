@@ -1,34 +1,151 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Chat – BikerConnect</title>
-<link rel="stylesheet" href="style.css" />
+<title>BikerConnect</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<meta charset="UTF-8">
+<title>BikerConnect – Chats</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Schriftart direkt aus Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Grundstil */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Inter', sans-serif;
+}
+body {
+ background-color: #121212;
+ color: white;
+ display: flex;
+ justify-content: center;
+ min-height: 100vh;
+}
+/* App Container */
+.app {
+ width: 100%;
+ max-width: 420px;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ background-color: #121212;
+}
+/* HEADER */
+.header {
+ padding: 20px;
+ font-size: 22px;
+ font-weight: 700;
+ text-align: center;
+ background: linear-gradient(135deg, #ff3c00, #ff7a00);
+}
+/* Chat Liste */
+.chat-list {
+ flex: 1;
+ overflow-y: auto;
+}
+.chat {
+ display: flex;
+ align-items: center;
+ padding: 15px;
+ border-bottom: 1px solid #222;
+ cursor: pointer;
+ transition: background 0.2s;
+}
+.chat:hover {
+ background: #1b1b1b;
+}
+.avatar {
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ background: #ff7a00;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 700;
+ margin-right: 12px;
+}
+.chat-info {
+ flex: 1;
+}
+.chat-name {
+ font-weight: 600;
+ margin-bottom: 4px;
+}
+.chat-last {
+ font-size: 13px;
+ color: #aaa;
+}
+.chat-time {
+ font-size: 12px;
+ color: #777;
+}
+/* Bottom Navigation */
+.nav {
+ display: flex;
+ justify-content: space-around;
+ padding: 12px 0;
+ background-color: #111;
+ border-top: 1px solid #222;
+}
+.nav a {
+ color: #aaa;
+ text-decoration: none;
+ font-size: 12px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.nav a.active {
+ color: #ff7a00;
+}
+</style>
 </head>
 <body>
-<header>
-<div class="logo">🏍️ BikerConnect</div>
-<nav>
-<ul>
-<li><a href="index.html">Start</a></li>
-<li><a href="biker.html">Finde Biker</a></li>
-<li><a href="chat.html">Chat</a></li>
-<li><a href="kontakt.html">Kontakt</a></li>
-</ul>
-</nav>
-</header>
-<section class="content">
-<h1>Chat (Demo)</h1>
-<div class="chat-box">
-<p><strong>Max:</strong> Hey, fahren wir Sonntag?</p>
-<p><strong>Du:</strong> Klar! Treffpunkt wie immer am Biker-Treff?</p>
-<input type="text" placeholder="Nachricht schreiben..." />
+<div class="app">
+<!-- HEADER -->
+<div class="header">Chats</div>
+<!-- CHAT LIST -->
+<div class="chat-list">
+<div class="chat">
+<div class="avatar">L</div>
+<div class="chat-info">
+<div class="chat-name">Lukas • KTM 390</div>
+<div class="chat-last">Wann fahren wir?</div>
 </div>
-</section>
-<footer>
-<p>Kontakt: <a href="mailto:Lisa.birmes@gmail.com">Lisa.birmes@gmail.com</a></p>
-<p>&copy; 2025 BikerConnect</p>
-</footer>
+<div class="chat-time">14:32</div>
+</div>
+<div class="chat">
+<div class="avatar">M</div>
+<div class="chat-info">
+<div class="chat-name">Mia • Ninja 400</div>
+<div class="chat-last">Bin am Wochenende frei</div>
+</div>
+<div class="chat-time">12:10</div>
+</div>
+<div class="chat">
+<div class="avatar">T</div>
+<div class="chat-info">
+<div class="chat-name">Tom • MT-07</div>
+<div class="chat-last">Treffpunkt?</div>
+</div>
+<div class="chat-time">Gestern</div>
+</div>
+</div>
+<!-- NAVIGATION -->
+<div class="nav">
+<a href="chat.html" class="active">Chats</a>
+<a href="feed.html">Feed</a>
+<a href="discover.html">Entdecken</a>
+<a href="map.html">Karte</a>
+<a href="profile.html">Profil</a>
+</div>
+</div>
 </body>
 </html>
